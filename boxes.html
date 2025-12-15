@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title></title>
 
-  <!-- Instant fallback redirect (non-iOS) -->
+  <!-- Instant fallback redirect (non-iOS default) -->
   <meta http-equiv="refresh" content="0;url=https://play.google.com/store/apps/details?id=com.snapbreak.boxes&hl=en" />
 
   <script>
@@ -27,13 +27,60 @@
   </script>
 
   <style>
-    /* Prevent white flash */
     html, body {
       height: 100%;
       margin: 0;
-      background-color: #0b0f14;
+      background-color: #2F2B38;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    .container p {
+      max-width: 420px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    a {
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 0.85em;
+      opacity: 0.6;
     }
   </style>
 </head>
-<body></body>
+<body>
+  <div class="container">
+    <div>
+      <p>
+        You have used an app download link from <strong>Snapbreak</strong>.<br><br>
+        If you were not automatically redirected to your content, then
+        <a href="https://play.google.com/store/apps/details?id=com.snapbreak.boxes&hl=en">
+          click here again
+        </a>.
+        <br><br>
+        Otherwise you can now close this page.
+      </p>
+
+      <div class="footer">
+        © 2025 Snapbreak
+      </div>
+    </div>
+  </div>
+</body>
 </html>
