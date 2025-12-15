@@ -9,16 +9,15 @@
     (function () {
       const ua = navigator.userAgent || navigator.vendor || window.opera;
 
-      const isAndroid = /Android/i.test(ua);
       const isIOS =
         /iPad|iPhone|iPod/.test(ua) ||
         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
       if (isIOS) {
+        // iOS → App Store
         window.location.replace("https://apps.apple.com/us/app/lost-in-play/id6449434958");
-      } else if (isAndroid) {
-        window.location.replace("https://play.google.com/store/apps/details?id=com.snapbreak.lip&hl=en");
       } else {
+        // Android + Windows + Mac + Linux → same destination
         window.location.replace("https://play.google.com/store/apps/details?id=com.snapbreak.lip&hl=en");
       }
     })();
