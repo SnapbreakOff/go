@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title></title>
 
+  <!-- Instant fallback redirect (non-iOS) -->
+  <meta http-equiv="refresh" content="0;url=https://play.google.com/store/apps/details?id=com.snapbreak.boxes&hl=en" />
+
   <script>
     (function () {
       const ua = navigator.userAgent || navigator.vendor || window.opera;
@@ -17,11 +20,20 @@
         // iOS → App Store
         window.location.replace("https://apps.apple.com/us/app/boxes-lost-fragments/id1575369135");
       } else {
-        // Android + Windows + Mac + Linux → same destination
-        window.location.replace("https://play.google.com/store/apps/details?id=com.snapbreak.boxes&hl=enX");
+        // Android + Desktop → Google Play
+        window.location.replace("https://play.google.com/store/apps/details?id=com.snapbreak.boxes&hl=en");
       }
     })();
   </script>
+
+  <style>
+    /* Prevent white flash */
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #0b0f14;
+    }
+  </style>
 </head>
 <body></body>
 </html>
